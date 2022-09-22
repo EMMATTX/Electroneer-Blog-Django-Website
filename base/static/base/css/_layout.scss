@@ -1,0 +1,18 @@
+.main{
+    margin: 1em auto;
+    min-height: 500px;
+    padding: 2em;
+    background-color: #fff;
+    border: 1px solid #e8e8e8;
+    border-radius: 3px;
+
+    @include for-999-up{
+        width: 60em;
+    }
+
+    &--no-box{
+        padding: 0;
+        background-color: inherit;
+        border: inherit;
+    }
+}

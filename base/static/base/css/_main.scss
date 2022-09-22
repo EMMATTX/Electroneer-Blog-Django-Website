@@ -1,0 +1,32 @@
+*, *::after, *::before{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: #fafafa;
+}
+  
+p{
+    line-height: 1.5em;
+}
+
+a{
+    text-decoration: none;
+
+}
+
+h1{
+    font-size: 30px;
+    font-weight: 300;
+    margin-top: 0;
+}
+
+ul{
+    padding-top: 0;
+}
+
+.clearfix{
+    clear: both;
+}
+

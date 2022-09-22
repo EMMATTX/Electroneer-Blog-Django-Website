@@ -1,0 +1,27 @@
+.post{
+    padding-bottom: 1em;
+
+    &-date {
+        margin: .5em 0;
+    }
+
+    &-description{
+        font-size: 1.3em;
+        margin: .7em 0;
+    }
+
+    &-body{
+        margin: .3em 0;
+        line-height: 1.5em;
+    }
+
+    &-image{
+        margin: .5em 0;
+        width: 100%;
+        // max-width: 100%;
+
+        @include for-999-up{
+            width: auto;
+        }
+    }
+}

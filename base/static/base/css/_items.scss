@@ -1,0 +1,28 @@
+.items{
+    &-item{
+        display: block;
+
+        &-content{
+            margin: 3px;
+            background-color: #fff;
+            padding: 1em;
+            border: 1px solid #e8e8e8;
+            border-radius: 2px;
+            height: 310px;
+        }
+
+        &-image{
+            max-width: 100%;
+        }
+
+        &-title, &-description{
+            padding: .5em 0;
+            line-height: 1.5em;
+            color: #333;
+        }
+
+        &-title{
+            font-size: 1.2em;
+        }
+    }
+}

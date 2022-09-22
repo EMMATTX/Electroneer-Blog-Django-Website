@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en-uk">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+              content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>{% block title %}Home{% endblock title %} |  Electroneer</title>
+        <link rel="stylesheet" href="{% static 'base/css/style.css' %}"/>
+        <script src="{% static 'base/js/dropdown.js' %}"></script>
+    </head>
+    <body>
+        <div class="header">
+            <a class="header-brand" href="{% url 'home' %}">
+                <img class="header-brand-logo" src= {% static 'base/images/logo.png' %} />
+                <span class="header-brand-name">Electroneer</span>
+            </a>
+            <ul class="menu">
+                <li class="menu-li">
+                    <a class="menu-li-a {% url 'home' as home_url %} {% if request.get_full_path == home_url %} menu-li-a--active {% endif %}" href="{% url 'home' %}">Home</a>
+                </li>
+
+                <li class="menu-li">
+                    <a class="menu-li-a" href="">About</a>
+                </li>
+            </ul>
+
+            <img onclick="myToggle()" class="mobile-menu toggle show-mobile" alt="menu" src="{% static 'base/images/hamburger.png' %}" />
+
+                <ul id="dropdown" class="dropdown">
+                    <li class="dropdown-li dropdown-li--active">
+                        <a class="dropdown-li-a" href="">Home</a>
+                    </li>
+
+                    <li class="dropdown-li">
+                        <a class="dropdown-li-a" href="about">About</a>
+                    </li>
+                </ul>
+
+            <div class="header-slogan"><strong>Electronics</strong> The Right Way.
+            </div>
+        </div>
+
+        <div class="main {% block hidebox %}{% endblock hidebox %}"> 
+            {% block h1 %}{% endblock h1 %}
+            {% block content %} {% endblock content %}
+        </div>
+
+        <div class="footer"></div>
+        <div class="footer-bottom">
+            &copy; {% now "Y" %} Electroneer. All rights reserved.
+        </div>
+    </body>
+</html>

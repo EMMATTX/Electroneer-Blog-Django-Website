@@ -1,0 +1,16 @@
+h1{
+    font-size: 100px;
+    color: red;
+}
+
+@import "breakpoints";
+@import "main";
+@import "header";
+@import "menu";
+@import "dropdown";
+@import "footer";
+@import "layout";
+@import "post";
+@import "grid";
+@import "items";
+@import "pagination";
